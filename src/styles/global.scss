@@ -1,0 +1,13 @@
+@use 'sass:math';
+@use 'reset';
+@use 'vars';
+@use 'fonts';
+@use 'grid';
+@use 'base';
+@use 'dropdown';
+@use 'header';
+@use 'footer';
+
+body{
+    font-family: 'Graphik LCG', sans-serif;
+}

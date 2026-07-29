@@ -34,13 +34,18 @@
 .dart-row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: math.div($main-padding, -1);
-    margin-left: math.div($main-padding, -1);	
+    margin-right: math.div($main-padding, -2);
+    margin-left: math.div($main-padding, -2);	
 }
 
 .dart-align-items-center {
     -ms-flex-align: center!important;
     align-items: center!important;
+}
+
+.dart-align-items-end {
+    -ms-flex-align: end!important;
+    align-items: end!important;
 }
 
 .d-col {

@@ -1,3 +1,8 @@
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+
 // search-form
 const searchForm = document.querySelector(".search-form");
 if (searchForm) {
@@ -70,6 +75,62 @@ if (navLinks.length > 0 && subnavs.length > 0) {
       hideTimeout = setTimeout(() => {
         hideAllSubnavs();
       }, 100);
+    });
+  });
+}
+
+
+// sliders 
+const newsSliders = document.querySelectorAll(".news-slider");
+if (newsSliders.length > 0) {
+  newsSliders.forEach((newsSlider) => {
+    const slider = newsSlider.querySelector(".news-swiper");
+    const prevBtn = newsSlider.querySelector('.news-slider__button-prev');
+    const nextBtn = newsSlider.querySelector('.news-slider__button-next');
+    const swiper1 = new Swiper(slider, {
+        modules: [Navigation, Autoplay],
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 32,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            prevEl: prevBtn,
+            nextEl: nextBtn,
+        },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+    });
+  })
+}
+
+// plan parallax
+const plans = document.querySelectorAll(".plan");
+if (plans.length > 0) {
+  plans.forEach((plan) => {
+    const image = plan.querySelector(".plan__image");
+    if (!image) return;
+
+    let rafId = null;
+
+    plan.addEventListener("mousemove", (e) => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const rect = plan.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2 * 10;
+        const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2 * 10;
+        image.style.transform = `translate(${x}px, ${y}px)`;
+        rafId = null;
+      });
+    });
+
+    plan.addEventListener("mouseleave", () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      image.style.transform = "translate(0, 0)";
     });
   });
 }

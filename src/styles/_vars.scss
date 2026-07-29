@@ -5,14 +5,14 @@ $small-tablets:         "768px";    // md		d-col-md-{1-12}
 $big-phones:            "611px";    // sm		d-col-sm-{1-12}
 $phones:                "430px";	  // from 0	d-col-{1-12}
 
-$main-padding:          15px;
+$main-padding:          32px;
 
 
 :root {
   --primary-bg: #121315;
   --primary-color: #00B9F3;
 
-  --main-padding: 15px;
+  --main-padding: 32px;
 }
 
 @media (prefers-color-scheme: dark) {

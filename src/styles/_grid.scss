@@ -6,19 +6,22 @@
     margin: 0 auto;
     padding-left: $main-padding;
     padding-right: $main-padding;
-    @media (min-width: $small-desktop){
+    @media (max-width: $desktop){
         width: 1150px;
     }
-    @media (min-width: $tablets){
+		@media (max-width: $small-desktop){
+        width: 900px;
+    }
+    @media (max-width: $tablets){
         width: 100%;
     }
-    @media (min-width: $small-tablets){
+    @media (max-width: $small-tablets){
         width: 100%;
     }
-    @media (min-width: $big-phones){
+    @media (max-width: $big-phones){
         width: 100%;
     }
-    @media (min-width: $phones){
+    @media (max-width: $phones){
         width: 100%;
     }
 }
@@ -35,7 +38,11 @@
     display: flex;
     flex-wrap: wrap;
     margin-right: math.div($main-padding, -2);
-    margin-left: math.div($main-padding, -2);	
+    margin-left: math.div($main-padding, -2);
+		@media (max-width: $desktop){
+			margin-right: math.div($main-padding-md, -2);
+    	margin-left: math.div($main-padding-md, -2);
+		}
 }
 
 .dart-align-items-center {
@@ -62,6 +69,10 @@
 	min-height: 1px;
 	padding-right: math.div($main-padding, 2);
 	padding-left: math.div($main-padding, 2);
+	@media (max-width: $desktop){
+		padding-right: math.div($main-padding-md, 2);
+		padding-left: math.div($main-padding-md, 2);
+	}
 }
 
 @for $i from 1 to 13 {
@@ -77,6 +88,10 @@
 		min-height: 1px;
 		padding-right: math.div($main-padding, 2);
 		padding-left: math.div($main-padding, 2);
+		@media (max-width: $desktop){
+			padding-right: math.div($main-padding-md, 2);
+			padding-left: math.div($main-padding-md, 2);
+		}
 	}
 }
 

@@ -24,8 +24,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/main.js"),
-        style: resolve(__dirname, "src/scss/global.scss"),
+        main: resolve(__dirname, "src/js/main.js"),
+        style: resolve(__dirname, "src/styles/global.scss"),
         index: resolve(__dirname, "index.html"),
         // home: resolve(__dirname, "pages/home.html"),
         // category: resolve(__dirname, "pages/category.html"),

@@ -102,10 +102,89 @@ if (newsSliders.length > 0) {
         },
         breakpoints: {
           640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          1024: { slidesPerView: 2 },
+          1170: { slidesPerView: 3 },
         },
     });
   })
+}
+
+// hero slider
+const hero = document.querySelector(".hero");
+if (hero) {
+  new Swiper(hero, {
+    modules: [Pagination, Autoplay],
+    loop: true,
+    speed: 800,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".hero__pagination",
+      clickable: true,
+    },
+  });
+}
+
+// map-list dots
+const mapDots = document.querySelectorAll(".map-list-dot");
+
+function repositionPopup(dot) {
+  const popup = dot.querySelector(".map-list-dot__popup");
+  if (!popup) return;
+
+  popup.classList.remove(
+    "map-list-dot__popup-position_top",
+    "map-list-dot__popup-position_right"
+  );
+
+  if (window.innerWidth <= 991) return;
+
+  popup.style.visibility = "hidden";
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const map = dot.closest(".map-list");
+      if (!map) {
+        popup.style.visibility = "";
+        return;
+      }
+
+      const mapRect = map.getBoundingClientRect();
+      const popupRect = popup.getBoundingClientRect();
+
+      if (popupRect.bottom > mapRect.bottom) {
+        popup.classList.add("map-list-dot__popup-position_top");
+      }
+
+      if (popupRect.right > mapRect.right) {
+        popup.classList.add("map-list-dot__popup-position_right");
+      }
+
+      popup.style.visibility = "";
+    });
+  });
+}
+
+if (mapDots.length > 0) {
+  mapDots.forEach((dot) => {
+    dot.addEventListener("click", function (e) {
+      e.stopPropagation();
+      mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
+      this.classList.add("map-list-dot-active");
+      repositionPopup(this);
+    });
+  });
+  document.addEventListener("click", function () {
+    mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
+  });
+
+  mapDots.forEach((dot) => {
+    if (dot.classList.contains("map-list-dot-active")) {
+      repositionPopup(dot);
+    }
+  });
 }
 
 // plan parallax

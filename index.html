@@ -9,6 +9,35 @@
   <div class="dart_wrapper">
     {{> header}}
     <div class="dart_main">
+      <div class="hero swiper">
+        <div class="swiper-wrapper">
+          <!-- slide -->
+          <div class="hero__slide swiper-slide" style="background-image: url('/img/banner.jpg')">
+            <div class="dart-container hero__content">
+              <span class="hero__title">Logistics & Transport</span>
+              <p class="hero__subtitle">Advanced Telematics and IOT solutions</p>
+              <div class="hero__actions">
+                <a href="#" class="dart-btn dart-btn-primary">Get in touch now</a>
+                <a href="#" class="dart-btn dart-btn-simple-alt">Cases</a>
+              </div>
+            </div>
+          </div>
+          <!-- / slide -->
+           <!-- slide -->
+          <div class="hero__slide swiper-slide" style="background-image: url('/img/banner.jpg')">
+            <div class="dart-container hero__content">
+              <span class="hero__title">Logistics & Transport</span>
+              <p class="hero__subtitle">Advanced Telematics and IOT solutions</p>
+              <div class="hero__actions">
+                <a href="#" class="dart-btn dart-btn-primary">Get in touch now</a>
+                <a href="#" class="dart-btn dart-btn-simple-alt">Cases</a>
+              </div>
+            </div>
+          </div>
+          <!-- / slide -->
+        </div>
+        <div class="swiper-pagination hero__pagination"></div>
+      </div>
       <div class="section-default">
         <div class="dart-container">
           <div class="section-default__header">
@@ -18,7 +47,7 @@
             <div class="devices-list">
               <div class="dart-row">
                 <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <a href="#" class="device">
                     <div class="device__title device__title-7x">
                       <span>7x</span>
@@ -33,7 +62,7 @@
                 </div>
                 <!-- / item -->
                  <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <a href="#" class="device">
                     <div class="device__title device__title-10">
                       <span>10</span>
@@ -48,7 +77,7 @@
                 </div>
                 <!-- / item -->
                  <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <a href="#" class="device">
                     <div class="device__title">
                       <span>Base Block</span>
@@ -76,7 +105,7 @@
             <div class="technologies-list">
               <div class="dart-row">
                 <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <div class="technology technology-can">
                     <div class="technology__title">
                       <span>CAN</span>
@@ -89,7 +118,7 @@
                 </div>
                 <!-- / item -->
                  <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <div class="technology technology-eco">
                     <div class="technology__title">
                       <span>Eco Driving</span>
@@ -102,7 +131,7 @@
                 </div>
                 <!-- / item -->
                  <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <div class="technology technology-easy">
                     <div class="technology__title">
                       <span>Easy Logic</span>
@@ -132,7 +161,7 @@
             <div class="plans-list">
               <div class="dart-row">
                 <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <div class="plan">
                       <div class="plan__image">
                         <img src="/img/plan_1.png" alt="">
@@ -144,6 +173,7 @@
                       <div class="plan__price">
                         <span class="plan__price-number">$150</span> / month
                       </div>         
+                      <div class="plan__price-desc"></div>
                       <div class="plan__text">
                         <p>5 hours of a dedicated engineer per month</p>
                         <ul>
@@ -162,7 +192,7 @@
                 </div>
                 <!-- / item -->
                  <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <div class="plan plan-blue">
                       <div class="plan__image">
                         <img src="/img/plan_2.png" alt="">
@@ -193,7 +223,7 @@
                 </div>
                 <!-- / item -->
                  <!-- item -->
-                <div class="d-col-md-4">
+                <div class="d-col-xl-4 d-col-lg-6">
                   <div class="plan plan-green">
                     <div class="plan__image">
                       <img src="/img/plan_3.png" alt="">
@@ -205,6 +235,7 @@
                       <div class="plan__price">
                         <span class="plan__price-number">$400</span> / month
                       </div>         
+                      <div class="plan__price-desc"></div>
                       <div class="plan__text">
                         <p>12 hours of priority engineer support per month</p>
                         <ul>
@@ -237,7 +268,8 @@
           </div>
           <div class="section-default__content">
             <div class="map-list">
-              <div class="map-list-dot map-list__dot-purple map-list-dot-active" style="bottom: 30%;left: 33%;">
+              <!-- dot -->
+              <div class="map-list-dot map-list__dot-purple" style="bottom: 30%;left: 33%;">
                 <span>Brazil</span>
                 <div class="map-list-dot__popup">
                   <div class="map-list-dot__image">
@@ -254,6 +286,26 @@
                   </div>
                 </div>
               </div>
+              <!-- / dot -->
+               <!-- dot -->
+              <div class="map-list-dot map-list__dot-blue " style="bottom: 15%;right: 15%;">
+                <span>Brazil</span>
+                <div class="map-list-dot__popup">
+                  <div class="map-list-dot__image">
+                    <img src="/img/dot.png" alt="">
+                  </div>
+                  <div class="map-list-dot__links">
+                    <ul>
+                      <li><a href="https://sgbras.com/" target="_blank">sgbras.com</a></li>
+                      <li><a href="mailto:sgbrasil@sgbras.com.br" target="_blank">sgbrasil@sgbras.com.br</a></li>
+                    </ul>
+                  </div>
+                  <div class="map-list-dot__text">
+                    <p>The vendor SGBras is one of the most famous peripheral manufacturers in Brazil</p>
+                  </div>
+                </div>
+              </div>
+              <!-- / dot -->
               <img src="/img/map.png" alt="">
             </div>
           </div>

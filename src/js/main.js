@@ -31,6 +31,76 @@ if (elements.length > 0) {
   });
 }
 
+// mobile menu
+const mobileMenuToggler = document.querySelector(".header__menu_mobile .navbar-toggler");
+const subnavigations = document.querySelector(".header__subnavigations");
+let menuScrollTop = 0;
+
+function openMobileMenu() {
+  menuScrollTop = window.scrollY || document.documentElement.scrollTop;
+  mobileMenuToggler.classList.remove("navbar-toggler-noactive");
+  subnavigations.classList.add("header__subnavigations-active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMobileMenu() {
+  mobileMenuToggler.classList.add("navbar-toggler-noactive");
+  subnavigations.classList.remove("header__subnavigations-active");
+  document.body.style.overflow = "";
+  window.scrollTo(0, menuScrollTop);
+}
+
+if (mobileMenuToggler && subnavigations) {
+  mobileMenuToggler.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (subnavigations.classList.contains("header__subnavigations-active")) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+}
+
+const subnavCloseBtn = document.querySelector(".header__subnavigations-close");
+if (subnavCloseBtn) {
+  subnavCloseBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    closeMobileMenu();
+  });
+}
+
+if (subnavigations) {
+  subnavigations.addEventListener("click", function (e) {
+    if (e.target.closest("a") && !e.target.closest('.mobile-header a[data-target="content"]')) {
+      closeMobileMenu();
+    }
+  });
+}
+
+// mobile subnavigation accordion
+const mobileHeaders = document.querySelectorAll('.header__subnavigation .mobile-header a[data-target="content"]');
+if (mobileHeaders.length > 0) {
+  mobileHeaders.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      if (window.innerWidth > 991) return;
+      e.preventDefault();
+
+      const subnav = this.closest(".header__subnavigation");
+      const content = subnav ? subnav.querySelector(".mobile-content") : null;
+
+      mobileHeaders.forEach((l) => {
+        if (l !== this) l.classList.remove("opened");
+      });
+      document.querySelectorAll(".header__subnavigation .mobile-content").forEach((c) => {
+        if (c !== content) c.classList.remove("opened");
+      });
+
+      this.classList.toggle("opened");
+      if (content) content.classList.toggle("opened");
+    });
+  });
+}
+
 // subnavigation
 const navLinks = document.querySelectorAll(".header__navigation a[data-target]");
 const subnavs = document.querySelectorAll(".header__subnavigation");
@@ -101,7 +171,8 @@ if (newsSliders.length > 0) {
             nextEl: nextBtn,
         },
         breakpoints: {
-          640: { slidesPerView: 2 },
+          300: { slidesPerView: 1.5, spaceBetween: 6, },
+          640: { slidesPerView: 2.5, spaceBetween: 16, },
           1024: { slidesPerView: 2 },
           1170: { slidesPerView: 3 },
         },
@@ -116,10 +187,10 @@ if (hero) {
     modules: [Pagination, Autoplay],
     loop: true,
     speed: 800,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: ".hero__pagination",
       clickable: true,
@@ -185,6 +256,37 @@ if (mapDots.length > 0) {
       repositionPopup(dot);
     }
   });
+}
+
+// select
+const selectElement = document.getElementById('partnerSelect');
+
+if(selectElement){
+  const map = document.querySelector('.map-list');
+  const mobile = document.querySelector('.map-list-dot__popup-mobile');
+  if(map){
+    selectElement.addEventListener('change', function(event) {
+      const element = document.querySelector('[data-value="'+ event.target.value +'"]');
+      if(element){
+        element.click();
+        const content = element.querySelector('.map-list-dot__popup');
+        if(content){
+          const clonedElement = content.innerHTML;
+          mobile.innerHTML = ''
+          mobile.innerHTML = clonedElement;
+          // mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
+          // element.classList.add("map-list-dot-active");
+          mobile.classList.add("opened");
+        }else{
+          mobile.classList.remove("opened");
+          mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
+        }
+      }else{
+        mobile.classList.remove("opened");
+        mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
+      }
+    });
+  }
 }
 
 // plan parallax

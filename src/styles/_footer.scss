@@ -153,4 +153,21 @@ footer{
             }
         }
     }
+    @media (max-width: $tablets){
+        .footer-menu{
+            display: none;
+        }
+        .footer-subscribe{
+            width: 100%;
+            margin-top: 32px;
+            .footer-subscribe__header{
+                font-size: 20px;
+            }
+            .dart-btn{
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
 }

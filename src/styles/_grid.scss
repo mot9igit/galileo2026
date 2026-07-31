@@ -4,16 +4,18 @@
 .dart-container{
     width: 1710px;
     margin: 0 auto;
-    padding-left: $main-padding;
-    padding-right: $main-padding;
+    padding-left: math.div($main-padding, 2);
+    padding-right: math.div($main-padding, 2);
     @media (max-width: $desktop){
         width: 1150px;
+				padding-left: math.div($main-padding-md, 2);
+    		padding-right: math.div($main-padding-md, 2);
     }
 		@media (max-width: $small-desktop){
         width: 900px;
     }
     @media (max-width: $tablets){
-        width: 100%;
+        width: 100%;				
     }
     @media (max-width: $small-tablets){
         width: 100%;

@@ -267,9 +267,15 @@
             </div>
           </div>
           <div class="section-default__content">
+            <div class="select-mobile">
+              <select name="country" class="country-select" id="partnerSelect">
+                <option value="bra">Brasil</option>
+                <option value="aus">Australia</option>
+              </select>
+            </div>
             <div class="map-list">
               <!-- dot -->
-              <div class="map-list-dot map-list__dot-purple" style="bottom: 30%;left: 33%;">
+              <div class="map-list-dot map-list__dot-purple" style="bottom: 30%;left: 33%;" data-value="bra">
                 <span>Brazil</span>
                 <div class="map-list-dot__popup">
                   <div class="map-list-dot__image">
@@ -288,8 +294,8 @@
               </div>
               <!-- / dot -->
                <!-- dot -->
-              <div class="map-list-dot map-list__dot-blue " style="bottom: 15%;right: 15%;">
-                <span>Brazil</span>
+              <div class="map-list-dot map-list__dot-blue" style="bottom: 15%;right: 15%;" data-value="aus">
+                <span>Australia</span>
                 <div class="map-list-dot__popup">
                   <div class="map-list-dot__image">
                     <img src="/img/dot.png" alt="">
@@ -308,6 +314,9 @@
               <!-- / dot -->
               <img src="/img/map.png" alt="">
             </div>
+            <div class="map-list-dot__popup map-list-dot__popup-mobile">
+              
+            </div>
           </div>
         </div>
       </div>
@@ -319,7 +328,7 @@
           <div class="section-default__content">
             <form action="#" class="form-grow-up">
               <div class="dart-row dart-align-items-end">
-                <div class="d-col-md-6">
+                <div class="d-col-12 d-col-lg-6">
                   <div class="dart-input dart-input-big">
                     <input type="text" name="name" placeholder="Name" autocomplete="on"/>
                   </div>
@@ -330,7 +339,7 @@
                     <input type="text" name="text" placeholder="Comment" autocomplete="off"/>
                   </div>
                 </div>
-                <div class="d-col-md-6">
+                <div class="d-col-12 d-col-lg-6">
                   <div class="dart-btn-container">
                     <button class="dart-btn dart-btn-primary dart-btn-medium">Go</button>
                     <span class="desc">In order to provide you the content requested, we need to store and process your personal data.</span>

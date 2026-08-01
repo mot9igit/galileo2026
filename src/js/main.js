@@ -4,15 +4,39 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 // search-form
-const searchForm = document.querySelector(".search-form");
-if (searchForm) {
-  const searchToggle = searchForm.querySelector(".search-form__toggle");
-  if (searchToggle) {
-    searchToggle.addEventListener("click", function (e) {
+const searchToggles = document.querySelectorAll(".search-form__toggle");
+
+function closeSearch() {
+  searchToggles.forEach((toggle) => toggle.classList.remove("active"));
+  document.querySelectorAll(".search-form__panel").forEach((panel) => panel.classList.remove("active"));
+}
+
+if (searchToggles.length > 0) {
+  searchToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
       e.preventDefault();
-      searchForm.classList.toggle("search-form-active");
+      const target = document.querySelector(this.dataset.target);
+      this.classList.toggle("active");
+      if (target) {
+        target.classList.toggle("active");
+        const input = target.querySelector("input");
+        if (target.classList.contains("active") && input) {
+          setTimeout(() => input.focus(), 250);
+        }
+      }
     });
-  }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeSearch();
+  });
+
+  document.querySelectorAll(".search-form__close").forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      closeSearch();
+    });
+  });
 }
 
 // dropdown
@@ -118,6 +142,7 @@ if (navLinks.length > 0 && subnavs.length > 0) {
       if (window.innerWidth <= 991) return;
 
       clearTimeout(hideTimeout);
+      closeSearch();
 
       const targetId = this.getAttribute("data-target");
       hideAllSubnavs();
@@ -247,7 +272,8 @@ if (mapDots.length > 0) {
       repositionPopup(this);
     });
   });
-  document.addEventListener("click", function () {
+  document.addEventListener("click", function (e) {
+    if (e.target.closest(".select-mobile")) return;
     mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
   });
 
@@ -267,23 +293,20 @@ if(selectElement){
   if(map){
     selectElement.addEventListener('change', function(event) {
       const element = document.querySelector('[data-value="'+ event.target.value +'"]');
+      mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
       if(element){
-        element.click();
+        element.classList.add("map-list-dot-active");
         const content = element.querySelector('.map-list-dot__popup');
         if(content){
           const clonedElement = content.innerHTML;
           mobile.innerHTML = ''
           mobile.innerHTML = clonedElement;
-          // mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
-          // element.classList.add("map-list-dot-active");
           mobile.classList.add("opened");
         }else{
           mobile.classList.remove("opened");
-          mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
         }
       }else{
         mobile.classList.remove("opened");
-        mapDots.forEach((d) => d.classList.remove("map-list-dot-active"));
       }
     });
   }

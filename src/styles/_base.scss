@@ -148,6 +148,9 @@
 .section-default{
   padding: 70px 0;  
   overflow-x: hidden;
+  &.section-default-without-top-padding{
+    padding-top: 0;
+  }
   &__header{
     margin-bottom: 48px;
     h2{
@@ -277,7 +280,16 @@
     line-height: 1.3;
     color: #FFFFFF;
     &.badges__item-blue{
+      background: #00B9F3;
+    }
+    &.badges__item-blue-dark{
       background: #002B72;
+    }
+    &.badges__item-violet{
+      background: #C22184;
+    }
+    &.badges__item-green{
+      background: #30D672;
     }
   }
 }
@@ -334,4 +346,31 @@ p{
   font-size: 16px;
   line-height: 1.3;
   color: #121315;
+}
+
+.more {
+  width: 100%;
+  text-align: center;
+  .btn-more {
+    font-style: normal;
+    font-weight: 500;
+    display: inline-block;
+    padding: 9px 25px;
+    font-size: 18px;
+    text-align: center;
+    width: 100% !important;
+    max-width: 288px !important;
+    color: var(--primary-bg);
+    letter-spacing: -0.01em;
+    background: #ECECEC;
+    border: 1px solid #ECECEC;
+    border-radius: 32px;
+    cursor: pointer;
+  }
+  .btn-more.active, .btn-more:hover {
+    color: var(--primary-bg);
+    background: transparent;
+    border: 1px solid var(--primary-bg);
+    text-decoration: none;
+  }
 }

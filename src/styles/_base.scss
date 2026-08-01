@@ -151,6 +151,17 @@
   &.section-default-without-top-padding{
     padding-top: 0;
   }
+  &.section-default__header-small{
+    .section-default__header{
+      h2{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 1.3;
+        color: #121315;
+      }
+    }
+  }
   &__header{
     margin-bottom: 48px;
     h2{
@@ -234,12 +245,29 @@
       width: 100%;
       outline: none;
     }
+    textarea{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.3;
+      color: #9BA2AA;
+      padding: 24px 24px;
+      width: 100%;
+      outline: none;
+      min-height: 200px;
+      border: 1.5px solid #121315;
+      border-radius: 20px;
+    }
   }
   @media (max-width: $desktop){
     &.dart-input-big{
       input{
         font-size: 20px;
         padding: 16px 0;
+      }
+      textarea{
+        font-size: 20px;
+        padding: 16px 16px;
       }
     }
   }

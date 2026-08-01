@@ -29,7 +29,7 @@ export default defineConfig({
         index: resolve(__dirname, "index.html"),
         contacts: resolve(__dirname, "pages/contacts.html"),
         blog: resolve(__dirname, "pages/blog.html"),
-        // product_card: resolve(__dirname, "pages/product_card.html"),
+        solutions: resolve(__dirname, "pages/solutions.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

@@ -1774,3 +1774,56 @@ body{
         }
     }
 }
+
+.support-card {
+    border-radius: 24px;
+    background-color: #EFF0F2;
+    padding: 32px;
+    margin-bottom: 32px;
+    .support-card__label {
+        display: block;
+        font-size: 26px;
+        font-weight: 500;
+        margin-top: 24px;
+    }
+    .support-card__value {
+        display: block;
+        color: #00B9F3;
+        font-size: 36px;
+        font-weight: 500;
+        margin-top: 80px;
+    }
+    @media (max-width: $desktop){
+        .support-card__label {
+            font-size: 20px;
+        }
+        .support-card__value {
+            font-size: 22px;
+        }
+    }
+    @media (max-width: $tablets){
+        margin-bottom: 12px;
+        padding: 12px;
+        .support-card__label {
+            font-size: 18px;
+        }
+        .support-card__value {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    }
+    @media (max-width: $phones){
+        margin-bottom: 12px;
+        padding: 12px;
+        .support-card__label {
+            font-size: 12px;
+        }
+        .support-card__value {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+

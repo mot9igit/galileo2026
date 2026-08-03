@@ -30,6 +30,7 @@ export default defineConfig({
         contacts: resolve(__dirname, "pages/contacts.html"),
         blog: resolve(__dirname, "pages/blog.html"),
         solutions: resolve(__dirname, "pages/solutions.html"),
+        payservices: resolve(__dirname, "pages/payservices.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

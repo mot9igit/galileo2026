@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use 'vars' as *;
 
 .dart_wrapper {
@@ -400,5 +401,24 @@ p{
     background: transparent;
     border: 1px solid var(--primary-bg);
     text-decoration: none;
+  }
+}
+
+.text-blue{
+  color: var(--primary-color)
+}
+
+.table-responsive{
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  table{
+    width: 100%;
+    min-width: max-content;
+  }
+  @media (max-width: $tablets){
+    width: calc(100% + 16px);
+    margin-right: math.div($main-padding-md, -2);
   }
 }

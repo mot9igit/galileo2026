@@ -31,6 +31,7 @@ export default defineConfig({
         blog: resolve(__dirname, "pages/blog.html"),
         solutions: resolve(__dirname, "pages/solutions.html"),
         payservices: resolve(__dirname, "pages/payservices.html"),
+        device: resolve(__dirname, "pages/device.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

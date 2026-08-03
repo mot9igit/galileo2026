@@ -1,48 +1,167 @@
 <footer class="dart_footer">
-    <div class="dart-container">
-        <div class="dart-row">
-            <div class="d-col-12 d-col-lg-6">
-                <div class="header__logo">
-                    <a href="#">
-                    <img src="/img/logo.svg" alt="" />
-                    </a>
-                </div>
-                <div class="contacts-links">
-                    <ul>
-                        <li><a href="#"><img src="/img/icons/whatsapp.svg" alt=""></a></li>
-                        <li><a href="tel:+445678658867">+44 567 865 88 67</a></li>
-                        <li><a href="mailto:sales@galileosky.com">sales@galileosky.com</a></li>
-                    </ul>
-                </div>
-                <div class="socials-links">
-                    <ul>
-                        <li><a href="#"><img src="/img/icons/linkedin.svg" alt=""></a></li>
-                        <li><a href="#"><img src="/img/icons/youtube.svg" alt=""></a></li>
-                        <li><a href="#"><img src="/img/icons/instagram.svg" alt=""></a></li>
-                    </ul>
-                </div>
-                <div class="copyrights">
-                    <a href="#" target="_blank">Privacy Policy</a>
-                    <a href="#" target="_blank">Cookies Policy</a>
-                    <span>2021-2026 Galileosky</span>
-                </div>
-            </div>
-            <div class="d-col-12 d-col-lg-6">
-                <div class="footer-right">
-                    <div class="footer-menu">
-                        <ul>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Solutions</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">About us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-subscribe">
-                        <span class="footer-subscribe__header">Sign up for updates to get the latest on Galileosky</span>
-                        <a href="#" class="dart-btn dart-btn-secondary">Sign up</a>
-                    </div>
-                </div>
-            </div>
+  <div class="dart-container">
+    <div class="dart-row">
+      <div class="d-col-12 d-col-lg-6">
+        <div class="header__logo">
+          <a href="#">
+            <img src="/img/logo.svg" alt="" />
+          </a>
         </div>
+        <div class="contacts-links">
+          <ul>
+            <li><a href="#"><img
+                  src="/img/icons/whatsapp.svg"
+                  alt=""
+                /></a></li>
+            <li><a href="tel:+445678658867">+44 567 865 88 67</a></li>
+            <li><a
+                href="mailto:sales@galileosky.com"
+              >sales@galileosky.com</a></li>
+          </ul>
+        </div>
+        <div class="socials-links">
+          <ul>
+            <li><a href="#"><img
+                  src="/img/icons/linkedin.svg"
+                  alt=""
+                /></a></li>
+            <li><a href="#"><img src="/img/icons/youtube.svg" alt="" /></a></li>
+            <li><a href="#"><img
+                  src="/img/icons/instagram.svg"
+                  alt=""
+                /></a></li>
+          </ul>
+        </div>
+        <div class="copyrights">
+          <a href="#" target="_blank">Privacy Policy</a>
+          <a href="#" target="_blank">Cookies Policy</a>
+          <span>2021-2026 Galileosky</span>
+        </div>
+      </div>
+      <div class="d-col-12 d-col-lg-6">
+        <div class="footer-right">
+          <div class="footer-menu">
+            <ul>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Solutions</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">About us</a></li>
+            </ul>
+          </div>
+          <div class="footer-subscribe">
+            <span class="footer-subscribe__header">Sign up for updates to get
+              the latest on Galileosky</span>
+            <a href="#" class="dart-btn dart-btn-white">Sign up</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </footer>
+
+<div class="modals">
+  <div class="modal-content" id="request_sample">
+    <form
+      class="form sample_request ajax_form"
+      action="#"
+      method="post"
+      id="sample_request_form"
+      data-success="&lt;span&gt;Thank you!&lt;/span&gt;&lt;p class=&quot;desc&quot;&gt;Your request has been sent.&lt;br/&gt;&lt;span class=&quot;green&quot;&gt;We will contact you shortly.&lt;/span&gt;&lt;/p&gt;"
+    >
+      <span class="modal-content__title">Request a sample</span>
+      <input type="hidden" name="page" value="Galileosky 7x C" />
+      <input type="hidden" name="pageid" value="238" />
+      <input type="hidden" name="formname" value="Запрос образца" />
+      <input type="hidden" name="event" value="pol_test_ok" />
+      <div class="form-group hidden">
+        <label for="sample_request_form_username">Your name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="sample_request_form_username"
+          name="username"
+          placeholder="site_forms_username_placeholder"
+        />
+      </div>
+      <div class="message"></div>
+      <div class="fields">
+        <p>The model of the Galileosky tracking device for your project</p>
+        <div class="input-group">
+          <div class="dart-input-group dart-input">
+            <input
+              class="dart-input"
+              placeholder="Name"
+              type="text"
+              name="name"
+              required=""
+            />
+          </div>
+          <div class="dart-input-group dart-input">
+            <input
+              class="dart-input"
+              placeholder="Phone"
+              type="text"
+              name="phone"
+              required=""
+            />
+          </div>
+          <div class="dart-input-group dart-input">
+            <input
+              class="dart-input"
+              placeholder="Email"
+              type="text"
+              name="email"
+              required=""
+            />
+          </div>
+          <div class="dart-input-group dart-input">
+            <input
+              class="dart-input"
+              placeholder="Comment"
+              type="text"
+              name="text"
+            />
+          </div>
+          <div class="dart-input-group">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="1"
+                name="agree_email"
+                id="agree_email"
+                required=""
+              />
+              <label class="form-check-label" for="agree_email">
+                Send me news and updates by email
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="button_block">
+          <button type="submit" class="dart-btn dart-btn-primary dart-btn-small">Go</button>
+          <p class="button_block__text">In order to provide you the
+            content requested, we need to
+            <a href="#">store</a>
+            and
+            <a
+              href="#"
+            >process your personal data.</a></p>
+
+        </div>
+      </div>
+
+      <input
+        type="hidden"
+        name="af_action"
+        value="aab84697b17897ede727b9d577fdffd1"
+      />
+      <input
+        type="text"
+        name="org"
+        value=""
+        class="_org"
+        style="display:none; height: 0; width: 0; padding: 0; border:none;"
+      /></form>
+  </div>
+</div>

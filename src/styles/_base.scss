@@ -207,10 +207,28 @@
       }
     }
   }
+  &.section-default-big-vpadding{
+    padding: 100px 0;
+  }
   &.section-default-blue-header{
     .section-default__header{
       h2{
         color: #00B9F3;
+      }
+    }
+  }
+  &.section-default-green-header{
+    .section-default__header{
+      h2{
+        color: #30D672;
+      }
+    }
+  }
+  &.section-default-fullwidth-header{
+    .section-default__header{
+      h2{
+        width: 100%;
+        max-width: 100%;
       }
     }
   }
@@ -229,6 +247,9 @@
         }
       }      
     }
+    &.section-default-big-vpadding{
+      padding: 75px 0;
+    }
   }
   @media (max-width: $tablets){
     padding: 40px 0;
@@ -237,6 +258,9 @@
       h2{
         font-size: 32px;
       }
+    }
+    &.section-default-big-vpadding{
+      padding: 40px 0;
     }
   }
 }

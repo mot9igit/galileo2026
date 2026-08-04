@@ -392,3 +392,31 @@ if (flipCards.length > 0) {
     }
   });
 }
+
+// examples-list parallax
+const examplesList = document.querySelector(".examples-list");
+if (examplesList) {
+  const GAP = 32;
+  const rows = examplesList.querySelectorAll(".examples-list__row");
+
+  function sizeRows() {
+    rows.forEach((row) => {
+      const item = row.querySelector(".examples-list__item");
+      const count = row.querySelectorAll(".examples-list__item").length;
+      row.style.width = item ? count * item.offsetWidth + GAP * (count - 1) + "px" : "0";
+    });
+  }
+
+  function onScroll() {
+    const offset = window.innerHeight - examplesList.getBoundingClientRect().top;
+    rows.forEach((row, i) => {
+      const shift = offset > 0 ? (0.25 * offset) / (i + 1) : 0;
+      row.style.transform = `translateX(-${shift}px)`;
+    });
+  }
+
+  sizeRows();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", sizeRows);
+  onScroll();
+}

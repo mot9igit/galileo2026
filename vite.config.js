@@ -32,6 +32,7 @@ export default defineConfig({
         solutions: resolve(__dirname, "pages/solutions.html"),
         solution: resolve(__dirname, "pages/solution.html"),
         payservices: resolve(__dirname, "pages/payservices.html"),
+        devices: resolve(__dirname, "pages/devices.html"),
         device: resolve(__dirname, "pages/device.html"),
         search: resolve(__dirname, "pages/search.html"),
       },

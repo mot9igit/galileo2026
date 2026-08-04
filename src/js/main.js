@@ -369,3 +369,26 @@ if (plans.length > 0) {
     });
   });
 }
+
+// flip cards
+const flipCards = document.querySelectorAll(".devices_big_list__flip_card");
+if (flipCards.length > 0) {
+  flipCards.forEach((card) => {
+    const front = card.querySelector(".devices_big_list__flip_card_front");
+    const flippek = card.querySelector(".devices_big_list__flip_card_back .devices_big_list__flippek");
+
+    if (front) {
+      front.addEventListener("click", function (e) {
+        e.preventDefault();
+        card.classList.add("devices_big_list__flip_card-active");
+      });
+    }
+
+    if (flippek) {
+      flippek.addEventListener("click", function (e) {
+        e.preventDefault();
+        card.classList.remove("devices_big_list__flip_card-active");
+      });
+    }
+  });
+}

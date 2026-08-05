@@ -4408,12 +4408,17 @@ body{
     @media (max-width: $small-tablets){
         .main_banner_block{
             padding-top: 80px;
-            padding-bottom: 220px;
-            .introtext{
-                p{
-                    font-size: 24px;
+            padding-bottom: 160px;            
+            &.p_404{
+                h1{
+                    margin-bottom: 32px;
                 }
-            }
+                .introtext{
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }            
         }
         .img_404{
             padding-bottom: 160px;

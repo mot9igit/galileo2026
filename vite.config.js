@@ -29,6 +29,7 @@ export default defineConfig({
         index: resolve(__dirname, "index.html"),
         contacts: resolve(__dirname, "pages/contacts.html"),
         blog: resolve(__dirname, "pages/blog.html"),
+        comparison: resolve(__dirname, "pages/comparison.html"),
         solutions: resolve(__dirname, "pages/solutions.html"),
         solution: resolve(__dirname, "pages/solution.html"),
         payservices: resolve(__dirname, "pages/payservices.html"),
@@ -45,5 +46,5 @@ export default defineConfig({
         assetFileNames: `css/[name].[ext]`,
       },
     },
-  }
+  },
 });

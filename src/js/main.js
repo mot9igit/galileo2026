@@ -420,3 +420,33 @@ if (examplesList) {
   window.addEventListener("resize", sizeRows);
   onScroll();
 }
+
+// algorithm arrows
+const algorithmSections = document.querySelectorAll(".algorythm");
+
+function sizeAlgorithmArrows() {
+  algorithmSections.forEach((section) => {
+    const arrow = section.querySelector(".algorythm__arrow_big");
+    const arrowIn = section.querySelector(".algorythm__arrow_big_in");
+    if (!arrow || !arrowIn) return;
+
+    const elbowOffset = parseFloat(getComputedStyle(arrowIn, "::after").marginTop) || 0;
+    const height = (arrowIn.getBoundingClientRect().top + elbowOffset) - arrow.getBoundingClientRect().top;
+    if (height > 0) {
+      arrow.style.height = height + "px";
+    }
+  });
+}
+
+if (algorithmSections.length > 0) {
+  sizeAlgorithmArrows();
+  window.addEventListener("resize", sizeAlgorithmArrows);
+  window.addEventListener("load", sizeAlgorithmArrows);
+
+  if ("ResizeObserver" in window) {
+    const arrowObserver = new ResizeObserver(sizeAlgorithmArrows);
+    algorithmSections.forEach((section) => {
+      section.querySelectorAll(".algorythm__block").forEach((block) => arrowObserver.observe(block));
+    });
+  }
+}

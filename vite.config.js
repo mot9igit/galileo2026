@@ -36,6 +36,7 @@ export default defineConfig({
         device: resolve(__dirname, "pages/device.html"),
         search: resolve(__dirname, "pages/search.html"),
         technology: resolve(__dirname, "pages/technology.html"),
+        case: resolve(__dirname, "pages/case.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

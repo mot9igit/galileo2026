@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> meta }}
+  </head>
+
+  <body>
+    <div class="dart_wrapper">
+      {{> header}}
+      <div class="dart_main">
+        <div class="wrap_404">
+          <div
+            class="main_banner_block p_404"
+            style="background: linear-gradient(0deg, rgba(1, 0, 52, 0.4), rgba(1, 0, 52, 0.4)), url(/img/404_bg.jpg);"
+          >
+            <div class="dart-container">
+              <div class="dart-row">
+                <div class="d-col-xl-12">
+                  <h1>Page not found</h1>
+                </div>
+              </div>
+              <div class="dart-row">
+                <div class="d-col-xl-12">
+                  <div class="introtext">
+                    <p>The page you are looking for does not exist.<br/> Please try the search or <a href="contacts.html">contact us</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="def-section img_404">
+            <div class="dart-container">
+              <img src="/img/404.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="section-default section-default-big-vpadding">
+          <div class="dart-container">
+            <div class="section-default__header">
+              <h2>Contact us, we will try to help you</h2>
+            </div>
+            <div class="section-default__content">
+              <form action="#" class="form-grow-up">
+                <div class="dart-row dart-align-items-end">
+                  <div class="d-col-12 d-col-lg-6">
+                    <div class="dart-input dart-input-big">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        autocomplete="on"
+                      />
+                    </div>
+                    <div class="dart-row">
+                      <div class="d-col-6">
+                        <div class="dart-input dart-input-big">
+                          <input
+                            type="text"
+                            name="email"
+                            placeholder="E-mail"
+                            autocomplete="on"
+                          />
+                        </div>
+                      </div>
+                      <div class="d-col-6">
+                        <div class="dart-input dart-input-big">
+                          <input
+                            type="text"
+                            name="phone"
+                            placeholder="Phone"
+                            autocomplete="on"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dart-input dart-input-big">
+                      <input
+                        type="text"
+                        name="company"
+                        placeholder="Company"
+                        autocomplete="on"
+                      />
+                    </div>
+                    <div class="dart-input dart-input-big">
+                      <textarea
+                        name="text"
+                        placeholder="Details (Your region, industry, project goals, etc.)"
+                        autocomplete="off"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="d-col-12 d-col-lg-6">
+                    <div class="dart-btn-container">
+                      <button class="dart-btn dart-btn-primary dart-btn-medium">
+                        Go
+                      </button>
+                      <span class="desc"
+                        >In order to provide you the content requested, we need
+                        to store and process your personal data.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{> footer}}
+    </div>
+    {{> scripts}}
+  </body>
+</html>

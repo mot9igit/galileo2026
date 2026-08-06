@@ -5365,7 +5365,6 @@ body {
 
       img {
         transition: transform 0.3s ease;
-        transform: rotate(180deg);
       }
     }
 
@@ -5374,7 +5373,7 @@ body {
     }
 
     &.open .easy-course__learn-title img {
-      transform: rotate(0deg);
+      transform: rotate(180deg);
     }
 
     ul {

@@ -40,6 +40,7 @@ export default defineConfig({
         case: resolve(__dirname, "pages/case.html"),
         notFound: resolve(__dirname, "pages/404.html"),
         po: resolve(__dirname, "pages/po.html"),
+        peripherals: resolve(__dirname, "pages/peripherals.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

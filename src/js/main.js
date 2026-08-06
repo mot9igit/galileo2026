@@ -450,3 +450,16 @@ if (algorithmSections.length > 0) {
     });
   }
 }
+
+// easy-logic course accordion
+const easyCourseAccordeons = document.querySelectorAll(".easy-course__learn");
+if (easyCourseAccordeons.length > 0) {
+  easyCourseAccordeons.forEach((accordeon) => {
+    const title = accordeon.querySelector(".easy-course__learn-title");
+    if (title) {
+      title.addEventListener("click", function () {
+        accordeon.classList.toggle("open");
+      });
+    }
+  });
+}

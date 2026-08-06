@@ -39,6 +39,7 @@ export default defineConfig({
         technology: resolve(__dirname, "pages/technology.html"),
         case: resolve(__dirname, "pages/case.html"),
         notFound: resolve(__dirname, "pages/404.html"),
+        po: resolve(__dirname, "pages/po.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

@@ -3571,21 +3571,19 @@ body {
   }
   @media (max-width: $desktop) {
     .product_features__item {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 0;
-      .product_features__image {
-        width: 50%;
-        padding: 32px 32px;
-      }
-      .product_features__content {
-        width: 50%;
-        padding: 32px 32px;
-        p {
-          font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px 20px;
+        .product_features__image {
+            width: 100%;
         }
-      }
+        .product_features__content {
+            width: 100%;
+            p {
+                font-size: 20px;
+            }
+        }
     }
     .dart-row {
       > * {

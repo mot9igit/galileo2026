@@ -42,6 +42,7 @@ export default defineConfig({
         po: resolve(__dirname, "pages/po.html"),
         peripherals: resolve(__dirname, "pages/peripherals.html"),
         configurator: resolve(__dirname, "pages/configurator.html"),
+        'easy-logic-school': resolve(__dirname, "pages/easy-logic-school.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

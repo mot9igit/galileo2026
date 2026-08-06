@@ -43,6 +43,7 @@ export default defineConfig({
         peripherals: resolve(__dirname, "pages/peripherals.html"),
         configurator: resolve(__dirname, "pages/configurator.html"),
         'easy-logic-school': resolve(__dirname, "pages/easy-logic-school.html"),
+        'easy-logic-templates': resolve(__dirname, "pages/easy-logic-templates.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

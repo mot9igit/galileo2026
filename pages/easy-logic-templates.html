@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    {{> meta }}
+  </head>
+
+  <body>
+    <div class="dart_wrapper">
+      {{> header}}
+      <div class="dart_main">
+        <div class="dart-container">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="#">Main</a></li>
+              <li><a href="#">Support</a></li>
+              <li><span>Configurator</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="text_banner">
+          <div class="dart-container">
+            <h1>Easy Logic templates</h1>
+          </div>
+        </div>
+
+        <div class="section-default section-default-without-top-padding">
+          <div class="dart-container">
+            <div class="subscribe-form">
+              <div class="dart-row dart-align-items-center">
+                <div class="d-col-12 d-col-xl-6">
+                  <div class="subscribe-form__header">
+                    <img src="/img/envelope.svg" alt="" />
+                    <span class="subscribe-form__title"
+                      >Galileosky Mailing List</span
+                    >
+                    <span class="subscribe-form__description"
+                      >Keep up to date with events and news</span
+                    >
+                  </div>
+                </div>
+                <div class="d-col-12 d-col-xl-6">
+                  <form action="#">
+                    <input
+                      type="text"
+                      name="email"
+                      autocomplete="on"
+                      placeholder="Email"
+                    />
+                    <button type="submit">Subscribe</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{> footer}}
+    </div>
+    {{> scripts}}
+  </body>
+</html>

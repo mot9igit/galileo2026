@@ -41,6 +41,7 @@ export default defineConfig({
         notFound: resolve(__dirname, "pages/404.html"),
         po: resolve(__dirname, "pages/po.html"),
         peripherals: resolve(__dirname, "pages/peripherals.html"),
+        configurator: resolve(__dirname, "pages/configurator.html"),
       },
       output: {
         entryFileNames: `js/[name].js`,

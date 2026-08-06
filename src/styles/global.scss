@@ -1767,7 +1767,6 @@ body {
         color: #9ba2aa;
       }
     }
-    
   }
   &.page-hero-easy-logic-school {
     background-size: cover;
@@ -1780,11 +1779,16 @@ body {
       right: 0;
       bottom: 0;
       z-index: 1;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 15.1%, rgba(0, 0, 0, 0.6) 67.19%, rgba(0, 0, 0, 0) 96.35%) !important;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.7) 15.1%,
+        rgba(0, 0, 0, 0.6) 67.19%,
+        rgba(0, 0, 0, 0) 96.35%
+      ) !important;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -1792,30 +1796,35 @@ body {
       height: 366px;
       display: block;
       z-index: 2;
-      background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0.95) 14.58%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(
+        0deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.95) 14.58%,
+        rgba(255, 255, 255, 0) 100%
+      );
     }
 
     .breadcrumbs {
       position: relative;
       z-index: 2;
     }
-   
+
     .page-hero-easy-logic-school__description {
       padding: 50px 0 32px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       .page-hero-easy-logic-school__description--content {
-          position: absolute;
-          z-index: 4;
-          width: 100%;
-          top: 30%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        top: 30%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
       }
 
       span {
@@ -1843,7 +1852,6 @@ body {
       .page-hero-easy-logic-school__image {
         margin: 112px 0 48px;
         text-align: center;
-
       }
       p {
         margin: 0 auto;
@@ -1855,7 +1863,6 @@ body {
         color: #9ba2aa;
       }
     }
-    
   }
   .page-hero__description {
     display: block;
@@ -4843,13 +4850,13 @@ body {
       margin-bottom: 40px;
       .dart-row {
         gap: 20px;
-        div {          
+        div {
           overflow: hidden;
           display: flex;
           justify-content: center;
           align-items: center;
-          img{
-            border: 1px solid #9D9FA0;
+          img {
+            border: 1px solid #9d9fa0;
             border-radius: 100%;
             width: 130px;
             height: 130px;
@@ -4901,11 +4908,11 @@ body {
       }
     }
     @media (max-width: $tablets) {
-        & + .perifery__item {
-            margin-top: 32px;
-            padding-top: 32px;
-            border-top: 1px solid #9d9fa0;
-        }
+      & + .perifery__item {
+        margin-top: 32px;
+        padding-top: 32px;
+        border-top: 1px solid #9d9fa0;
+      }
       h2 {
         font-size: 32px;
         margin-bottom: 24px;
@@ -4994,10 +5001,9 @@ body {
     margin: 0;
     padding: 0;
 
-    li {  
+    li {
       margin-bottom: 12px;
       list-style: none;
-
 
       &:last-child {
         margin-bottom: 0;
@@ -5083,7 +5089,7 @@ body {
 }
 
 .config-info {
-  border-top: 1px solid #9D9FA0;
+  border-top: 1px solid #9d9fa0;
   padding-top: 32px;
   p {
     font-style: normal;
@@ -5235,32 +5241,42 @@ body {
     margin-bottom: 16px;
   }
 
-    &__section {
+  &__section {
     background-image: url(/img/easy-logic-school/bg_easybasic.png);
     background-size: cover;
     position: relative;
     overflow: hidden;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       height: 160px;
       display: block;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.95) 14.58%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.95) 14.58%,
+        rgba(255, 255, 255, 0) 100%
+      );
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       height: 160px;
       display: block;
-      background: linear-gradient(0deg, #ECECEC 0%, rgba(236, 236, 236, 0.95) 14.58%, rgba(236, 236, 236, 0) 100%);
+      background: linear-gradient(
+        0deg,
+        #ececec 0%,
+        rgba(236, 236, 236, 0.95) 14.58%,
+        rgba(236, 236, 236, 0) 100%
+      );
     }
   }
 
@@ -5316,16 +5332,16 @@ body {
     margin-top: 96px;
 
     a {
-        border-radius: 100px;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 23px;
-        color: #FFFFFF;
-        padding: 14px 32px;
-        display: block;
-        width: 610px;
-        text-align: center;
-        height: max-content;
+      border-radius: 100px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 23px;
+      color: #ffffff;
+      padding: 14px 32px;
+      display: block;
+      width: 610px;
+      text-align: center;
+      height: max-content;
     }
   }
 

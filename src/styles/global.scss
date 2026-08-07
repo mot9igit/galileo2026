@@ -152,17 +152,17 @@ body {
     position: relative;
     z-index: 1;
     &.technology-can {
-      background-image: url(/img/canbg.svg);
+      background-image: url(/assets/templates/galileotlt/img/canbg.svg);
       background-size: contain;
       background-position: left bottom;
     }
     &.technology-eco {
-      background-image: url(/img/ecobg.svg);
+      background-image: url(/assets/templates/galileotlt/img/ecobg.svg);
       background-size: contain;
       background-position: right bottom;
     }
     &.technology-easy {
-      background-image: url(/img/easybg2.svg);
+      background-image: url(/assets/templates/galileotlt/img/easybg2.svg);
       background-size: contain;
       background-position: right bottom;
     }
@@ -284,7 +284,7 @@ body {
       display: block;
       width: 40px;
       height: 40px;
-      background-image: url("/img/slider-button.svg");
+      background-image: url("/assets/templates/galileotlt/img/slider-button.svg");
       background-size: cover;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -301,7 +301,7 @@ body {
       display: block;
       width: 40px;
       height: 40px;
-      background-image: url("/img/slider-button.svg");
+      background-image: url("/assets/templates/galileotlt/img/slider-button.svg");
       background-size: cover;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -725,7 +725,7 @@ body {
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
-    background-image: url("/img/arrow-down-alt.svg");
+    background-image: url("/assets/templates/galileotlt/img/arrow-down-alt.svg");
     background-repeat: no-repeat;
     background-position: right 20px center;
     &:focus {
@@ -4695,7 +4695,7 @@ body {
 .peripherals__hero {
   background:
     linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
-    url(/public/img/peripherals/perifery_gb.png), #000000;
+    url(/assets/templates/galileotlt/img/peripherals/perifery_gb.png), #000000;
   padding-top: 0;
   padding-bottom: 0;
   position: relative;

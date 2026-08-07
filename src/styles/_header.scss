@@ -266,7 +266,7 @@ header{
                             display: inline-block;
                             width: 16px;
                             height: 16px;
-                            background-image: url(/img/arrow-down.svg);
+                            background-image: url(/assets/templates/galileotlt/img/arrow-down.svg);
                             transform: translate(0, -50%);
                             transition: all .2s ease;
                         }
@@ -565,7 +565,7 @@ header{
     }
     &::after{
         content: "";
-        background-image: url(/img/icons/arrow-down.svg);
+        background-image: url(/assets/templates/galileotlt/img/icons/arrow-down.svg);
         background-repeat: no-repeat;
         background-size: cover;
         width: 16px;

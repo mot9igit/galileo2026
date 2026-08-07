@@ -14,8 +14,11 @@
   "devDependencies": {
     "autoprefixer": "^10.5.4",
     "sass": "^1.101.3",
+    "sharp": "^0.35.3",
+    "svgo": "^4.0.2",
     "vite": "^8.1.1",
-    "vite-plugin-handlebars": "^2.0.3"
+    "vite-plugin-handlebars": "^2.0.3",
+    "vite-plugin-image-optimizer": "^2.0.3"
   },
   "dependencies": {
     "@fancyapps/ui": "^6.1.14",

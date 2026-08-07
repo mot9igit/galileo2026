@@ -1218,7 +1218,7 @@ body {
       }
     }
   }
-  form {
+  form .fields{
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -4838,6 +4838,7 @@ body {
   }
 }
 
+.content-block__item ol,
 .integration-steps {
   margin: 0;
   padding: 0;
